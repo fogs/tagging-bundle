@@ -1,0 +1,23 @@
+{
+    "name": "fogs/tagging-bundle",
+    "description": "Tag any entity in your Symfony2 project.",
+    "homepage": "http://github.com/fogs/tagging-bundle",
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-0": {
+            "Fogs\\TaggingBundle": ""
+        }
+    },
+    "require": {
+        "php": ">=5.4",
+        "fpn/tag-bundle": "dev-master",
+        "max-favilli/tagmanager": "master",
+        "twitter/typeahead.js": "dev-master"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "target-dir": "Fogs/TaggingBundle",
+    "minimum-stability": "dev"
+}

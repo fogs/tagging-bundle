@@ -1,0 +1,37 @@
+{% block tags_widget %}
+	
+	{% set hidden_id = id %}
+	{% set hidden_name = full_name %}
+
+	{% set type = 'hidden' %}
+    {{ block('form_widget_simple') }}
+
+	{% set type = 'text' %}
+	{% set value = null %}
+	{% set required = null %}
+	{% set full_name = null %}
+	{% set id = 'tagsmanager_' ~ id  %}
+	{% set classes = attr['class'] is defined ? attr['class'] ~ ' ' ~ 'tagsmanager' : 'tagsmanager' %}
+	{% set attr = attr|merge({ 'class': classes}) %} 
+	
+    <div id="{{ 'tagscontainer_' ~ id }}"></div>
+    {{ block('form_widget_simple') }}
+    		
+    <script>
+		if (typeof taggingOptions=='undefined') var taggingOptions = {};
+		taggingOptions['{{ id }}'] = {
+			tagsManager: {
+				hiddenTagListId: '{{ hidden_id }}', 
+				hiddenTagListName: '{{ hidden_name }}', 
+				output : '#{{ hidden_id }}', 
+				tagsContainer: '#{{ 'tagscontainer_' ~ id }}'
+			},
+			typeahead: {
+				 name: 'tags',
+				 limit: 5,
+				 remote: '{{ path('tags_search') }}/%QUERY'
+			}
+		};
+	</script>
+
+{% endblock tags_widget %}

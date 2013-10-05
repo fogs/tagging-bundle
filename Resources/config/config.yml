@@ -1,0 +1,19 @@
+# FPN Tag Configuration
+fpn_tag:
+    model:
+        tag_class:     Fogs\TaggingBundle\Entity\Tag
+        tagging_class: Fogs\TaggingBundle\Entity\Tagging
+
+        
+# Assetic Configuration
+assetic:
+    assets:
+        typeahead_js:
+            input: "%kernel.root_dir%/../vendor/twitter/typeahead.js/dist/typeahead.min.js"
+            output: js/typeahead.min.js
+        tagging_js:
+            inputs: 
+              - "%kernel.root_dir%/../vendor/max-favilli/tagmanager/tagmanager.js"
+              - "%kernel.root_dir%/../vendor/fogs/tagging-bundle/Fogs/TaggingBundle/Resources/public/tagging.js"
+            output: js/tagging-bundle.js
+            

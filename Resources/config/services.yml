@@ -1,0 +1,15 @@
+parameters:
+    fpn_tag.tag_manager.class: Fogs\TaggingBundle\Service\TagManager
+
+services:
+    fogs_tag.form.tags:
+        class: Fogs\TaggingBundle\Form\TagsType
+        arguments: [ "@fpn_tag.tag_manager" ]
+        tags:
+            - { name: form.type, alias: tags }
+            
+    fogs_tag.taggable.subscriber:
+        class: Fogs\TaggingBundle\EventListener\TaggableSubscriber
+        arguments: [ '@service_container', 'fpn_tag.tag_manager' ]
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }
