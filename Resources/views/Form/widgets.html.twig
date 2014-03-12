@@ -18,20 +18,27 @@
     {{ block('form_widget_simple') }}
     		
     <script>
-		if (typeof taggingOptions=='undefined') var taggingOptions = {};
-		taggingOptions['{{ id }}'] = {
-			tagsManager: {
-				hiddenTagListId: '{{ hidden_id }}', 
-				hiddenTagListName: '{{ hidden_name }}', 
-				output : '#{{ hidden_id }}', 
-				tagsContainer: '#{{ 'tagscontainer_' ~ id }}'
-			},
-			typeahead: {
-				 name: 'tags',
-				 limit: 5,
-				 remote: '{{ path('tags_search') }}/%QUERY'
-			}
-		};
+            if (typeof taggingOptions=='undefined') var taggingOptions = {};
+            
+            taggingOptions['{{ id }}'] = {
+                tagsManager: {
+                    hiddenTagListId: '{{ hidden_id }}', 
+                    hiddenTagListName: '{{ hidden_name }}', 
+                    output : '#{{ hidden_id }}', 
+                    tagsContainer: '#{{ 'tagscontainer_' ~ id }}'
+                },
+                suggestions: {
+                    remote: {
+                        url: '{{ path('tags_search') }}/%QUERY',
+                        // convert strings to json objects
+                        filter: function(list) {
+                            return $.map(list, function(item) { return { name: item }; });
+                        }
+                    }
+                },
+                typeahead: {}
+            };
+
 	</script>
 
 {% endblock tags_widget %}
