@@ -9,7 +9,7 @@ fpn_tag:
 assetic:
     assets:
         typeahead_js:
-            input: "%kernel.root_dir%/../vendor/twitter/typeahead.js/dist/typeahead.min.js"
+            input: "%kernel.root_dir%/../vendor/twitter/typeahead.js/dist/typeahead.jquery.min.js"
             output: js/typeahead.min.js
         tagging_js:
             inputs: 
