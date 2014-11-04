@@ -50,10 +50,8 @@ Activate the bundles configuration by adding an imports statement in your config
 ``` yaml
 imports:
 	# ...
-    - { resource: ../../vendor/fogs/tagging-bundle/Fogs/TaggingBundle/Resources/config/config.yml }
+    - { resource: @FogsTaggingBundle/Resources/config/config.yml }
 ```
-
-(You know a better way to enable this bundles configuration? Please tell me or even better: fork & fix. Thanks again.)
 
 Add routes to this bundle. Only needed, if you plan to use typeahead. This file is usually located at `app/config/routing.yml`:
 
