@@ -1,5 +1,5 @@
 {
-    "name": "fogs/tagging-bundle",
+    "name": "jstoeffler/tagging-bundle",
     "description": "Tag any entity in your Symfony2 project.",
     "homepage": "http://github.com/fogs/tagging-bundle",
     "license": "MIT",
