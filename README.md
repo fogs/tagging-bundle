@@ -21,12 +21,16 @@ wrapper around a Doctrine extension.
 You can either use composer to add the bundle :
 
 ``` sh
-$ php composer.phar require fogs/tagging-bundle dev-master
+$ php composer.phar require max-favilli/tagmanager:dev-master@dev
+$ php composer.phar require twitter/typeahead.js:dev-master@dev
+$ php composer.phar require fogs/tagging-bundle:dev-master@dev
 ```
 
 Or you can edit your `composer.json` where you have to add the following:
 
     "require": {
+        "max-favilli/tagmanager": "dev-master@dev",
+        "twitter/typeahead.js": "dev-master@dev",
         "fogs/tagging-bundle":"dev-master",
     }
 
