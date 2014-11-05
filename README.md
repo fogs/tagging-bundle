@@ -108,7 +108,7 @@ class ProfileType extends AbstractType
     {
         $builder
             // ..
-            ->add('tags', 'tags');
+            ->add('tags', 'tags')
         ;
     }
 ```
