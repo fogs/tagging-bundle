@@ -17,7 +17,7 @@ assetic:
               - @FogsTaggingBundle/Resources/public/typeahead.css
             output: css/typeahead.css
         typeahead_js:
-            input: "%kernel.root_dir%/../vendor/twitter/typeahead.js/dist/typeahead.jquery.min.js"
+            input: "%kernel.root_dir%/../vendor/twitter/typeahead.js/dist/typeahead.bundle.js"
             output: js/typeahead.min.js
         tagging_js:
             inputs: 
