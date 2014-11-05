@@ -4,10 +4,18 @@ fpn_tag:
         tag_class:     Fogs\TaggingBundle\Entity\Tag
         tagging_class: Fogs\TaggingBundle\Entity\Tagging
 
-        
+
 # Assetic Configuration
 assetic:
     assets:
+        tagging_css:
+            inputs:
+              - "%kernel.root_dir%/../vendor/max-favilli/tagmanager/tagmanager.css"
+            output: css/tagging.css
+        typeahead_css:
+            inputs:
+              - @FogsTaggingBundle/Resources/public/typeahead.css
+            output: css/typeahead.css
         typeahead_js:
             input: "%kernel.root_dir%/../vendor/twitter/typeahead.js/dist/typeahead.jquery.min.js"
             output: js/typeahead.min.js
@@ -16,4 +24,4 @@ assetic:
               - "%kernel.root_dir%/../vendor/max-favilli/tagmanager/tagmanager.js"
               - "%kernel.root_dir%/../vendor/fogs/tagging-bundle/Fogs/TaggingBundle/Resources/public/tagging.js"
             output: js/tagging-bundle.js
-            
+
