@@ -22,6 +22,6 @@ assetic:
         tagging_js:
             inputs: 
               - "%kernel.root_dir%/../vendor/max-favilli/tagmanager/tagmanager.js"
-              - @FogsTaggingBundle/Fogs/TaggingBundle/Resources/public/tagging.js
+              - @FogsTaggingBundle/Resources/public/tagging.js
             output: js/tagging-bundle.js
 
