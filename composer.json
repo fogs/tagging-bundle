@@ -1,5 +1,5 @@
 {
-    "name": "fogs/tagging-bundle",
+    "name": "jstoeffler/tagging-bundle",
     "description": "Tag any entity in your Symfony2 project.",
     "homepage": "http://github.com/fogs/tagging-bundle",
     "license": "MIT",
@@ -11,9 +11,9 @@
     },
     "require": {
         "php": ">=5.4",
-        "fpn/tag-bundle": "dev-master",
-        "max-favilli/tagmanager": "dev-master",
-        "twitter/typeahead.js": "dev-master"
+        "fpn/tag-bundle": "~0.9",
+        "max-favilli/tagmanager": "dev-master@dev",
+        "twitter/typeahead.js": "dev-master@dev"
     },
     "config": {
         "bin-dir": "bin"

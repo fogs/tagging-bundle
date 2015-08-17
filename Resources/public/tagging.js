@@ -49,5 +49,7 @@
             queryTokenizer: function(q) { return q; }
         }
     };
+
+    $("input.tagsmanager").fogsTagsManager();
  
 }( jQuery ));
