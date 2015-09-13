@@ -21,7 +21,10 @@ class TagsTransformer implements DataTransformerInterface
 
 	public function transform($tags)
 	{
-		return join(', ', $tags->toArray());
+	        if(!is_null($tags))
+			return join(', ', $tags->toArray());
+	
+	        return '';
 	}
 
 	public function reverseTransform($tags)
