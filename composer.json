@@ -11,9 +11,9 @@
     },
     "require": {
         "php": ">=5.4",
-        "fpn/tag-bundle": "dev-master",
-        "max-favilli/tagmanager": "dev-master@dev",
-        "twitter/typeahead.js": "dev-master@dev"
+        "fpn/tag-bundle": "@dev",
+        "max-favilli/tagmanager": "@dev",
+        "twitter/typeahead.js": "@dev"
     },
     "config": {
         "bin-dir": "bin"
