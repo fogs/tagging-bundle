@@ -13,7 +13,7 @@
         "php": ">=5.4",
         "fpn/tag-bundle": "@dev",
         "max-favilli/tagmanager": "dev-master",
-        "twitter/typeahead.js": "dev-master"
+        "twitter/typeahead.js": "@dev"
     },
     "config": {
         "bin-dir": "bin"
