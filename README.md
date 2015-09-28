@@ -21,17 +21,15 @@ wrapper around a Doctrine extension.
 You can either use composer to add the bundle :
 
 ``` sh
-$ php composer.phar require max-favilli/tagmanager:dev-master@dev
-$ php composer.phar require twitter/typeahead.js:dev-master@dev
-$ php composer.phar require fogs/tagging-bundle:dev-master@dev
+$ php composer.phar require max-favilli/tagmanager:dev-master
+$ php composer.phar require fogs/tagging-bundle:@dev
 ```
 
 Or you can edit your `composer.json` where you have to add the following:
 
     "require": {
-        "max-favilli/tagmanager": "dev-master@dev",
-        "twitter/typeahead.js": "dev-master@dev",
-        "fogs/tagging-bundle":"dev-master",
+        "max-favilli/tagmanager": "dev-master",
+        "fogs/tagging-bundle":"@dev"
     }
 
 ### Setup the bundle
@@ -77,7 +75,7 @@ Ensure that the bundle's CSS and JS files are loaded. Most likely you want to do
 
 ``` twig
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/tagging.css') }}" />
-	<script src="{{ asset('js/tagging.js') }}"></script>
+	<script src="{{ asset('js/tagging-bundle.js') }}"></script>
 ```
 
 Since the tagging.js relies on JQuery, the `<script>` tag must be somewhere after JQuery has been loaded.
