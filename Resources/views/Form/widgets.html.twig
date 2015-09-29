@@ -29,7 +29,8 @@
                 },
                 suggestions: {
                     remote: {
-                        url: '{{ path('tags_search') }}/%QUERY',
+                        url: '{{ path('tags_search') }}/%QUERY_STR',
+                        wildcard: '%QUERY_STR',
                         // convert strings to json objects
                         filter: function(list) {
                             return $.map(list, function(item) { return { name: item }; });

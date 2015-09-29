@@ -29,10 +29,11 @@
                 
                 opts.bloodhound.source = tags.ttAdapter();
                 
-                $(this).typeahead(opts.typeahead, opts.bloodhound )	
-                    .on('typeahead:selected', function (e, d) {
-                        tagsManagers[this.id].tagsManager("pushTag", d.name);
-                    });	
+                var instance = $(this).typeahead(opts.typeahead, opts.bloodhound );
+                instance.on('typeahead:selected', function (e, d) {
+                    tagsManagers[this.id].tagsManager("pushTag", d.name);
+                    instance.typeahead('val','');
+                });
             }
             
         });
