@@ -21,8 +21,7 @@ interface Taggable extends BaseTaggable
      *
      * @var array
      */
-    function setTags(array $tags);
-    
-    function setTagManager(TagManager $tagManager);
-    
+    public function setTags(array $tags);
+
+    public function setTagManager(TagManager $tagManager);
 }

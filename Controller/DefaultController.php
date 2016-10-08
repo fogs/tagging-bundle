@@ -14,21 +14,20 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class DefaultController extends Controller
 {
-	
-	/**
-	 * Search for tags
-	 *
-	 * @Route("/{query}", name="tags_search", defaults={"query" = ""})
-	 * @Method("GET")
-	 */
-	
+
+    /**
+     * Search for tags
+     *
+     * @Route("/{query}", name="tags_search", defaults={"query" = ""})
+     * @Method("GET")
+     */
+
     public function searchAction($query)
     {
-    	$tags = $this->get('fpn_tag.tag_manager')->findTags($query);
-    	$tags = array_map(function ($value) {
-    		return $value['name'];
-    	}, $tags);
-    	return new JsonResponse($tags);
+        $tags = $this->get('fpn_tag.tag_manager')->findTags($query);
+        $tags = array_map(function ($value) {
+            return $value['name'];
+        }, $tags);
+        return new JsonResponse($tags);
     }
-    
 }
