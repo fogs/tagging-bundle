@@ -24,12 +24,11 @@ class FogsTaggingExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
-        
+
         // adding this to the config of this bundle did not work..
         $container->setParameter('twig.form.resources', array_merge(
-        		$container->getParameter('twig.form.resources'),
-        		array('FogsTaggingBundle:Form:widgets.html.twig')
+                $container->getParameter('twig.form.resources'),
+                array('FogsTaggingBundle:Form:widgets.html.twig')
         ));
     }
-    
 }
