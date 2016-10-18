@@ -14,7 +14,7 @@ assetic:
             output: css/tagging.css
         typeahead_css:
             inputs:
-              - @FogsTaggingBundle/Resources/public/typeahead.css
+              - "@FogsTaggingBundle/Resources/public/typeahead.css"
             output: css/typeahead.css
         typeahead_js:
             input: "%kernel.root_dir%/../vendor/twitter/typeahead.js/dist/typeahead.bundle.js"
@@ -22,6 +22,6 @@ assetic:
         tagging_js:
             inputs: 
               - "%kernel.root_dir%/../vendor/max-favilli/tagmanager/tagmanager.js"
-              - @FogsTaggingBundle/Resources/public/tagging.js
+              - "@FogsTaggingBundle/Resources/public/tagging.js"
             output: js/tagging-bundle.js
 
