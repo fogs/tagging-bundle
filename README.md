@@ -52,7 +52,7 @@ Activate the bundles configuration by adding an imports statement in your config
 ``` yaml
 imports:
 	# ...
-    - { resource: @FogsTaggingBundle/Resources/config/config.yml }
+    - { resource: "@FogsTaggingBundle/Resources/config/config.yml" }
 ```
 
 Add routes to this bundle. Only needed, if you plan to use typeahead. This file is usually located at `app/config/routing.yml`:
