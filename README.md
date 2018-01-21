@@ -75,10 +75,13 @@ Ensure that the bundle's CSS and JS files are loaded. Most likely you want to do
 
 ``` twig
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/tagging.css') }}" />
-	<script src="{{ asset('js/tagging-bundle.js') }}"></script>
 ```
 
-Since the tagging.js relies on JQuery, the `<script>` tag must be somewhere after JQuery has been loaded.
+Since the JS code relies on JQuery, the `<script>` tag must be somewhere after JQuery has been loaded.
+
+``` twig
+	<script src="{{ asset('js/tagging-bundle.js') }}"></script>
+```
 
 ### Setup an entity
 
